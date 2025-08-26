@@ -20,7 +20,7 @@ This guide will help you get set up before starting the course.
 ### [Homebrew](https://brew.sh/)
 Homebrew makes it easy to install and update command-line tools.
 
-**Install:**
+**Install from command line:**
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
@@ -65,7 +65,7 @@ Choose one:
 
 ## 6. Jupyter Notebooks
 
-Install via Conda:
+Install via Conda from command line:
 ```bash
 conda install jupyterlab
 ```
@@ -74,7 +74,7 @@ Or via pip:
 pip install jupyterlab
 ```
 
-> **Why:** Lets you run Python interactively in a browser — perfect for course tutorials.
+> **Why:** Lets you run Python interactively in a browser — python materials will be presented in jupyter notebooks on course github page.
 
 ---
 
@@ -119,7 +119,7 @@ Already available on macOS:
 
 ---
 
-## 10. Optional but Helpful
+## 10. Optional but highly recommended
 
 - [Oh My Zsh](https://ohmyz.sh/) — improves the Zsh shell with plugins and themes.
 

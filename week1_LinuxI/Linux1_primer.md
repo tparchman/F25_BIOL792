@@ -48,7 +48,7 @@ Other option, but less than ideal:
 - [install git-bash](https://www.atlassian.com/git/tutorials/git-bash#:~:text=What%20is%20Git%20Bash%3F,operating%20system%20through%20written%20commands) GitBash is easy to install and get working. However, the full ubuntu linux install would be much preferable. GitBash has most of the functionality of linux but not all, thus a full ubuntu linux install would be preferable. 
 
 
-For a brief history of Linux and its significance, as well as an alternative introduction to basic commands and ideas, see [Unix primer](https://github.com/tparchman/BIOL792/blob/master/unix_resources/unix_buerkle_guide.pdf) written by Alex Buerkle at University of Wyoming. This is **highly recommended** reading.
+For a brief history of Linux and its significance, as well as an alternative introduction to basic commands and ideas, see [Unix primer](https://github.com/tparchman/F25_BIOL792/blob/main/linux_resources/unix_buerkle_guide.pdf) written by Alex Buerkle at University of Wyoming. This is **highly recommended** reading.
 
 ## 3. Big data: text processing and manipulation
 Most big data is stored as text, or compressed text files. Text is special binary format of storing data whose numbers correspond to human readable digits, letters or characters. This is the most transparent and transportable way to store data, and is hence the medium of big data. 
@@ -218,13 +218,13 @@ Try them out, then explore how you can combine them for even more power.
   ```bash
   tree
   ```  
-  *(Install with `sudo apt install tree`)*
+  *(Install with `sudo apt install tree` or `brew install tree`)*
 
 - **Watch system activity in real time**  
   ```bash
   htop
   ```  
-  *(Install with `sudo apt install htop`)*
+  *(Install with `sudo apt install htop`or `brew install htop`)*
 
 - **Show your current working directory**  
   ```bash
@@ -481,7 +481,7 @@ Try them out, then explore how you can combine them for even more power.
 
 - **Speak text out loud (if `espeak` installed)**  
   ```bash
-  espeak "Hello from Linux"
+  espeak "Joe Burrow threw for 4,918 yards, 43 touchdowns and 9 interceptions in 17 games"
   ```
 
 - **Fun with random quotes**  
