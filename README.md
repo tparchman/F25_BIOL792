@@ -26,8 +26,8 @@ start working more confidently with Linux and Python, and to have the basic tool
        order to efficiently manipulate and work with large scale data.
 
 * Students will be able to use basic Linux and Python to
-       manipulate large genomic data sets, to conduct basic analyses of
-       genome level DNA sequencing data, and to speed and broaden analytical capability for their own graduate research.
+       manipulate large data , to conduct basic analyses of
+       such data data, and to speed and broaden analytical capability for their own graduate research.
 
 ## Required Materials
 
