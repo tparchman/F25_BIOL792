@@ -35,7 +35,7 @@ start working more confidently with Linux and Python, and to have the basic tool
 
 * **Computer with Linux/Linux operating system** Students with
   Mac computers already have machines running Linux and
-  are ready to go. Same goes for students running Linux (Ubuntu, Centos, etc.). Students using computers running a windows OS or will need to figure out how to install Linux or a Linux emulator on their machine. 
+  are ready to go. Same goes for students running Linux (Ubuntu, Centos, etc.). Students using computers running a windows OS will need to figure out how to install Linux or a Linux emulator on their machine. Details on options on provided under the [LinuxI directory[(https://github.com/tparchman/F25_BIOL792/tree/main/week1_LinuxI) 
 
 * **Supplemental primers, readings and assignments** will be announced during the class and provided on the [course github page](https://github.com/tparchman/F25_BIOL792).
 
@@ -46,17 +46,16 @@ start working more confidently with Linux and Python, and to have the basic tool
 We will meet twice a week (Tues/Thurs 6:00-7:15) but I typically reserve extra time during each window to allow discusion/troubleshooting on coding related to assignments and independent projects. At the beginning of each class, I will introduce new concepts and material that will form the basis of the exercises, assignments, or projects we will work through that week. We will cover questions regarding previous material, and then you will spend at least half of each class working independently, or in small groups, on writing code. All students should come to class having thoroughly read the assigned material and prepared to try new coding exercises. 
 
 ## Course Material Repositoy
-All readings, primers, problem set instructions, datasets, as well as ample supplemental materials will be available on the [course github page](https://github.com/tparchman/F24_BIOL792_coursepage). This will include primers for Linux and Python content, and additional resources for learning more about Python, Linux, and genomic workflows, and information and data sets related to assignments. 
+All readings, primers, problem set instructions, datasets, as well as ample supplemental materials will be available on the [course github page](https://github.com/tparchman/F25_BIOL792). This will include primers for Linux and Python content, and additional resources for learning more about Python, Linux, and genomic workflows, and information and data sets related to assignments. 
 
 ## Grades
 
 Your grade in this course will be based on the following:
-
-* **Weekly assignments (50%)** Assignments will involve working in the Linux environment, writing simple Bash and Python scripts, and working with a variety of large data sets that will be provided over the course of the semester. Assignments will be evaluated based on completion and effort. You can work in teams of 2 or 3 but will turn in your own Python.py or Bash.sh scripts for each assignment. Code should be annotated, step by step, to explain what you did to complete the task. More guidelines on these files and each specific assignment will be available on the course website. Assignments will be due before class on Tuesdays unless otherwise specified.
+* **Weekly assignments (50%)** Assignments will involve working in the Linux environment, writing simple Bash and Python scripts, and working with a variety of  data sets that will be provided over the course of the semester. Assignments will be evaluated based on completion and effort. You can work in teams of 2 or 3 but will turn in your own `Python.py` or `Bash.sh scripts` for each assignment. Code should be annotated, step by step, to explain what you did to complete the task. More guidelines on these files and each specific assignment will be available on the course website. Assignments will be due before class on Tuesdays unless otherwise specified.
  
-* **Participation (30%)** This is a graduate course, with full attendance and participation expected. Participation entails showing up for class prepared and doing your best to work through assigned tasks and programming example problems. Some of the material we cover might be easy and quick to figure out. Other material and tasks will present roadblocks that will be difficult to figure out. No questions will be stupid questions.
+* **Participation (30%)** This is a graduate course, with full attendance and participation expected. Participation entails **showing up for class prepared** and doing your best to work through assigned tasks and programming example problems. Some of the material we cover might be easy and quick to figure out. Other material and tasks will present roadblocks that will be more difficult to figure out. No questions will be stupid questions, and we will discuss and explore the use of AI to speed your learning.
  
-* **Independent project (20%)** Everyone will be responsible for an independent project which can be organized either individually, or as a group. This will involve identifying a task or problem in your research (or the research of the group you work within) that either requires, or can be made much more efficient, using Python or Linux scripting. Each group (or individual) will need to turn in a one to two page description of the task and how they will solve it by **week 5**. By week 12, each group will need to turn in final scripts and a one to three page description of how the problem was solved, and how the code works. In addition, each group will give a short (5-10 minute) presentation that describes the data, the problem, and how their scripting tools work. For those without data or ideas, I can supply some options.
+* **Independent project (20%)** Everyone will be responsible for an independent project which can be organized either individually, or as a group. This will involve identifying a task or problem in your research (or the research of the group you work within) that either requires, or can be made much more efficient, using Python or Linux scripting. Each group (or individual) will need to turn in a one to two page description of the task and how they will solve it by **week 6**. By week 12, each group will need to turn in final scripts and a one to three page description of how the problem was solved, and how the code works. In addition, each group will give a short (10-15 minute) presentation that describes the data, the problem, and how their scripting tools work. For those without data or ideas, I can supply options.
 
 **Grading scale as follows:**
 
@@ -71,8 +70,8 @@ Your grade in this course will be based on the following:
 
 ## University Policies
 ### **Dropping/Withdrawing**
-Last day to drop a class and receive a full refund: Sep. 5, 2024\
-**Final day to withdrawal from classes (W, no refund): Oct. 30, 2024**
+Last day to drop a class and receive a full refund: Sep. 5, 2025\
+**Final day to withdrawal from classes (W, no refund): Oct. 30, 2025**
 
 
 ### **Incomplete Grade**
