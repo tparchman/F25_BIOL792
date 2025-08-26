@@ -70,8 +70,8 @@ Your grade in this course will be based on the following:
 
 ## University Policies
 ### **Dropping/Withdrawing**
-Last day to drop a class and receive a full refund: Sep. 5, 2025\
-**Final day to withdrawal from classes (W, no refund): Oct. 30, 2025**
+Last day to drop a class and receive a full refund: Sep. 43, 2025\
+**Final day to withdrawal from classes (W, no refund): Oct. 28, 2025**
 
 
 ### **Incomplete Grade**
@@ -109,19 +109,19 @@ and appropriate accommodations.
 
 | Week    |  Date          |  Class                         |  Due          |
 | ------- | ---------------| ------------------------------ | ------------- |
-| Week 1  | Aug. 27, Aug 29    | Course introduction, Linux I    | 
-| Week 2  |	Sep. 3, Sep. 5      | Linux II                        |               |
-| Week 3  |	Sep. 10, 12	   | Linux III                       | Homework 1   |
-| Week 4  |	Sep. 17, 19	   | Linux IV                        | Homework 2   |
-| Week 5  |	Sep. 24, 26	   | Python I                       | Homework 3 | 
-| Week 6  |	Oct. 1, 3           | Python II	                    | Homework 4     
-| Week 7  |	Oct. 8, 10	   | Python III                     | Homework 5; *1-2 page project description
-| Week 8  |	Oct. 15, 17	   | Python IV                      | Homework 6 |
-| Week 9  |	Oct. 22, 24	   | Python V, Data science careers	                    | Homework 7 |  
-| Week 10 |	Oct. 29, Nov. 31	   | Python VI                      | Homework 8 |
-| Week 11 | Nov. 5, 7      | Python VII (pandas/numpy)                    | Homework 9 |
-| Week 12 | Nov. 12, 14    | Jupyter, Rmarkdown   | nothing |
-| Week 13 | Nov. 19, 21	   | Python VIII | nothing
-| Week 14 | Nov. 26, 	       | HPC/Pronghorn/Project prep | 
-| Week 15 | Dec. 3,	5   | Project prep/presentation  | projects due
-| Week 16 | Dec. 10	       | Present Projects		          |   *projects due
+| Week 1  | Aug. 26, Aug 28    | Course introduction, Linux I    | 
+| Week 2  |	Sep. 2, Sep. 4      | Linux II                        |               |
+| Week 3  |	Sep. 9, 11	   | Linux III                       | Homework 1   |
+| Week 4  |	Sep. 16, 18	   | Linux IV                        | Homework 2   |
+| Week 5  |	Sep. 23, 25	   | Python I                       | Homework 3 | 
+| Week 6  |	Sep. 30, Oct. 2           | Python II	                    | Homework 4     
+| Week 7  |	Oct. 7, 9	   | Python III                     | Homework 5; *1-2 page project description
+| Week 8  |	Oct. 14, 16	   | Python IV                      | Homework 6 |
+| Week 9  |	Oct. 21, 23	   | Python V, Data science careers	                    | Homework 7 |  
+| Week 10 |	Oct. 28, 30	   | Python VI                      | Homework 8 |
+| Week 11 | Nov. 4, 6      | Python VII (pandas/numpy)                    | Homework 9 |
+| Week 12 | Nov. 11, 13    | Jupyter, Rmarkdown   | nothing |
+| Week 13 | Nov. 18, 20	   | Python VIII | nothing
+| Week 14 | Nov. 25, 	       | HPC/Pronghorn/Project prep | 
+| Week 15 | Dec. 2,	4   | Project prep/presentation  | projects due
+| Week 16 | Dec. 9	       | Present Projects		          |   *projects due
