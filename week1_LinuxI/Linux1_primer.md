@@ -191,11 +191,37 @@ For this course, downloading individual files might suffice. But if you would li
 **hint:** make a directory somewhere on your computer for this course. Run below command in that directory.
 
 ```
-git clone https://github.com/tparchman/F24_BIOL792
+git clone https://github.com/tparchman/F25_BIOL792
+```
+
+The above command will built a directory `F25_BIOL792` directory from wherever the command was executed.
+
+To pull weekly updates I add to the github page, you can use the below command from inside the `F25_BIOL792` directory. This will pull new additional files. However, it will also overwite already existing files that you have edited with whatever lives on the github repo. So, if doing things this way, dont save altered files from the repo in this original directory. Rather, copy them somewhere else so the original directory will stay exactly as what is on the githup repo.
+
+```
+git pull
 ```
 
 **note:** I will be updating the course on a near weekly basis. Thus, you will likely want to update this directory using additional `git` commands. We will cover `git` in depth later in this course during a module focused on version control and data accessibility.
 
+## Making your terminal more effective, enabled and easy to use.
+
+Lots of options here, but my favorite is `ohmyzsh`.  Below are commands you can copy and paste into your terminal to install on `mac` unix or `PC` `Ubuntu linux`:
+
+On `mac`
+
+```
+brew install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+On `Ubuntu linux`:
+
+```
+sudo apt update
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
 ## To prepare for next week and beyond:
 
@@ -210,7 +236,7 @@ git clone https://github.com/tparchman/F24_BIOL792
 # Fun and Useful Linux Commands to Try
 
 These commands are safe to run, work in any Linux terminal, and will give you a taste of what’s possible in the command line.  
-Try them out, then explore how you can combine them for even more power.
+Try them out. We will learn more about package installers for the various versions of linux you are running (depending on PC or Mac) next week. Long story short, for Mac, you will use `brew`. For Ubuntu or Mynt Linux you will use `apt`. Some examples are given for some of the examples below.
 
 ---
 
