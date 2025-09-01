@@ -65,16 +65,6 @@ When you do type a command such as above during a terminal session, it will only
 If you are running a newer Mac OS, you are probably running the zsh terminal application. If so, `.zshrc` is the name of the profile file. If you are running an older Mac OS, or just prefer bash as a terminal application, the profile information will be stored in `.bash_profile` or `.bashrc`. If you are using a recent install of Ubuntu Linux you should also be using a zsh terminal. To change protections on your use of several dangerous Linux commands (`rm`, `mc`, and `cp` even), we are going to customize all of your profile files to include alias commands that add some protections. This will ensure that you do no overwrite important files or directories, and that you dont accidentally vaporize large amounts of stored data. If you already have a profile with alias control behavior that you like, great. Either way, we are going to add the alias commands below, or are going to have you replace your current `.zshrc` file with examples I have provided on the github page.
 
 
-I suggest the following alias list, or at least this is similar to what I use:
-
-    # helpful alias collection
-    alias python='python3'
-    alias ll="ls -laF"
-    alias ls="ls -F"
-    alias rm="rm -i"
-    alias mv="mv -i"
-    alias cp="cp -i"
-
 The alias collection above has some useful features. `ll` and `ls`, when typed, will give you more complete, and/or more readable information. `rm`, `mv`, and `cp` have the `-i` option added, which is  HIGHLY recommended. This will change the behavior of `rm`, `mv`, or `cp` to always ask if you are sure you want to remove a file, or overwrite a file with the same name in terms of `cp` and `mv`.
 
 ### ### `oh my zsh`: an open source, community-driven framework for managing your zsh configuration.
@@ -115,8 +105,10 @@ chsh -s $(which zsh)
   alias mv='mv -i'
   alias cp='cp -i'
 
-- **Theme choice**: Start with `agnoster` (clear, informative) or `ys` (compact and clean).
+- **Theme choice**: Start with `agnoster` (clear, informative) or `ys` (compact and clean). As you get more experience with ohmyzsh, you can change to any number of themes. Oh My Zsh comes with over 100 different themes, which control how your command prompt looks, from minimal styles that just show your directory, to colorful prompts that display git branches, timestamps, or system status. Exploring themes is a fun way to personalize your shell and make it easier to read. You can browse and preview all available themes here: [Oh My Zsh Theme Gallery](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes).  
+
 - **Plugins**: Enable `git` (default), and optionally add `zsh-autosuggestions` and `zsh-syntax-highlighting` for real-time feedback.
+
 - **Safer redirects**: Add `set -o noclobber` to prevent accidentally overwriting files with `>`.
 
 If you are running Mac Unix, you are going to use `zshrc_eg_mac_ohmyzsh` that you can find on course github page under week2.
@@ -179,7 +171,7 @@ Once you quit and restart your terminal app, your new alias settings should be w
 
 We will make common use of text viewers such as `less`, `head`, `tail` or `more`; especially `less`. Why would we just want to "look" and not "open" large text files? Large amounts of data stored in text are often beyond the memory capacity of GUI programs, and most of what we will work with will be far too large to "look" at usefully anyway. `less` will allow you to have a peak at a file to understand its structure, which is ultimately what you will need to write code to manipulate and extract information. 
 
-As `man` pages are by default viewed with `less`, look at the `man` page for `less` for guidance on how to control this text viewer.
+As `man` pages are by default viewed with `less` when you call them in the terminal, look at the `man` page for `less` for guidance on how to control this text viewer.
 
     man less
 
@@ -203,9 +195,11 @@ To open a file for editing within the terminal with `nano`:
 $ nano myfile.txt
 ```
 
+Yall dont need to worry about in terminal editors for now. Introducing them here so that you get the idea; when and why they are important will become apparent later when we learn to work on remote servers.
+
 ## 4. Compression and decompression using `gzip` and `gunzip`
 
-Compression and de-compression are regular activities associated with large text data files, so get comfortable with it. `gzip` is a command for compressing and decompressing files. 
+Compression and de-compression are regular activities associated with large text data files, so get comfortable with it. `gzip` is a command for compressing and decompressing files. **Compression is critical for preserving disc space and for moving large data between computers or servers over remote connection.** While you may need data in its uncompressed form, there is never a reason to NOT store data in compressed form.
 
 Compressed .gz files can be easily decompressed.
 
@@ -227,7 +221,7 @@ All .txt files in a directory can be compressed (or decompressed) using a wildca
 
 ## 5. stdout, redirection (`>`)
 
-**stdout** (standard out) is the text that is printed to screen whenLinux commands are executed. The `cat` command is used to concatenate files and print file contents to standard output. Using it as below will print the entire contents of passerina.fastq to screen. Try it.
+**stdout** (standard out) is the text that is printed to screen when Linux commands are executed. The `cat` command is used to concatenate files and print file contents to standard output. Using it as below will print the entire contents of passerina.fastq to screen (this file is located in the `week2_LinuxII` directory). Try it.
 
     cat passerina.fastq
 
@@ -274,63 +268,117 @@ If you have mutliple processes running, and want to kill one, use `kill` followe
 
 This is a bit extra for what we are doing this week, but I thought I would add it here as a guide for those interested. For installing on your personal mac computers, `brew` will be your most convenient option. I would stress here that this type of package installer/manager makes accomplishing these tasks in the Linux OS incredibly easy.
 
-**B. Linux on Mac Linux systems**
 
-`homebrew` manages and installs packages on Mac OS Linux. 
-To install brew (homebrew):
+### Package Management with Homebrew on macOS  
 
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+**Homebrew** (`brew`) is a package manager for macOS that makes it simple to install and manage software from the command line. It fills in the gap left by macOS, which does not have a built-in package manager like Ubuntu. Homebrew installs software into a central location (`/usr/local` on Intel Macs or `/opt/homebrew` on Apple Silicon) and handles updates and dependencies automatically. This allows you to quickly add tools needed for programming, science, and everyday command-line work.  
 
-`brew` is pretty easy to use. To look at a list of commands and their uses:
+### Basic Tutorial  
 
-    brew help
+1. Install Homebrew (if not already installed):  
 
-To search for an installable program:
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-    brew search
+2. Update Homebrew package list (always do this before installing new software): 
 
-To install a package:
+```bash
+brew update
+```
+3. Update installed packages to their latest versions: 
 
-    brew install packagename
+```bash
+brew upgrade
+```
 
-As a simple example, lets install a more useful version of `top`, `htop`, that has some expanded information and visuals. Using brew is quite easy, as you can see.
+4. Install a new package (for example, wget):
 
-    brew install htop
+```bash
+brew install wget
+```
+
+5. Remove a package you no longer need:
+
+```bash
+brew uninstall wget
+```
+
+6. Search for installable packages by keyword
+
+```bash
+brew search python
+```
+
+
+**Note**: Unlike `apt`, you generally don’t need `sudo` with Homebrew, because it installs everything under your user account.
 
 A more detailed, yet basic, tutorial can be found below. As with the above, carefully review before using.
 
 - https://wpbeaches.com/installing-homebrew-on-macos-big-sur-11-2-package-manager-for-linux-apps/
 
-**B. Linux distributions:**
+### Ubuntu Linux distributions: Package Management with `apt`
 
-`apt` is a package management system for most Linux distributions. It facilitates the installation, management, updates, and removal of software. Using apt-get requires superuser privileges (`sudo`), and will require password entry.
+Ubuntu uses the **Advanced Package Tool (APT)** to manage software. APT makes it easy to install, update, and remove programs from the system using the command line, while automatically handling dependencies (other packages that a program needs to run). This is one of the most important tools for keeping your system up to date and for adding new software in a safe, consistent way.  
 
+### Basic Tutorial  
 
-You can find useful tutorials on `apt` and `apt-get` below. We suggest reviewing information, and familiarizing yourself with `sudo` carefully before using.
+1. Update your package list (always do this before installing new software):  
+
+```bash
+   sudo apt update
+```
+
+2.  Upgrade installed packages to their latest versions:
+
+```bash
+sudo apt upgrade
+```
+
+3. Install a new package (for example, curl):
+
+```bash
+sudo apt install curl
+```
+4. Remove a package you no longer need:
+
+```bash
+sudo apt remove curl
+```
+
+5. Search for packages by keyword:
+
+```bash
+apt search python
+```
+
+6. Get information about a package:
+
+```bash
+apt show curl
+```
+You can find additional tutorials on `apt` and `apt-get` below. I suggest reviewing information, and familiarizing yourself with `sudo` carefully before using.
 
 - https://phoenixnap.com/kb/how-to-use-apt-get-commands
 - https://itsfoss.com/apt-get-linux-guide/
 - https://www.control-escape.com/linux/lx-swinstall.html
 
 
-To install software using `apt-get`:
-
-    sudo apt-get install <package_name>
-
-To remove software using `apt-get`:
-
-    sudo apt-get remove <package_name> 
-
-Note, the above doesnt remove configuration files associated with a package. To remove the package along and configuration files:
-
-    sudo apt-get purge <package_name> 
-
 ## 8. Regular expressions and text extraction with `grep`
 
-`grep` is a powerful regular expression engine, among the most commonly used commands for data science. You can explore the examples below using sample_passerina.fastq, available under week1 on the [course github page](https://github.com/tparchman/BIOL792). This is an increbily versatile command, so we better learn more. In it simplest invocation, `grep` will output every line in a file that matches the specified pattern.
+`grep` is a powerful regular expression engine, among the most commonly used commands for data science. You can explore the examples below using `sample_passerina.fastq.gz`, available under week2 on the [course github page](https://github.com/tparchman/F25_BIOL792). This is an increbily versatile command, so we better learn more. In it simplest invocation, `grep` will output every line in a file that matches a specified pattern.
 
 Since fastq files have a standard four line format (ID starting with @, DNA sequence, quality id starting with +, and quality score), we know that every sequence has a line starting with @ associated with it. 
 
+You will first need to decompress `sample_passerina.fastq.gz`, as detailed above with `gzip` and `gunzip`:
+
+     gunzip sample_passerina.fastq.gz
+
+Use `less` to have a look inside this file to get an idea of how its contents are structured. Important keystrokes shortcuts for `less` include `q` to exit, `spacebar` to 
+skip down a page, and `b` to skip up a page.
+
+    less sample_passerina.fastq.gz
+    
 We could write all of teh ID lines to a separate file:
 
     grep "^@" -c sample_passerina.fastq > idlines.txt
