@@ -15,7 +15,7 @@ http://korflab.ucdavis.edu/Unix_and_Perl/current.html
 
 **From here on record the commands you used for each exercise with a brief description of what it did in a file (yourlastname_unix2.txt), and keep that file in ~/BIOL792/
 
-**Starting next week (Unix 3)**, I will have you turn in a notes.txt file with your Unix commands and your explanation of how they worked. This will be a way for us to keep track assignment completion. It will also help me get an idea of where you all might be having troubles, or where you are quickly figuring out how to be extra clever. Note, I will not be 'grading' assignments for correctness. Rather, I will be reviewing them for effort and insight into progress in the class generally.
+**Starting next week (Unix 3)**, I will have you turn in a notes.txt file, or notes.md (if youd prefer to organize what you have done in markdown), with your  commands and your explanation of how they worked. This will be a way for us to keep track assignment completion. It will also help me get an idea of where you all might be having troubles, or where you are quickly figuring out how to be extra clever. Note, I will not be 'grading' assignments for correctness. Rather, I will be reviewing them for effort and insight into progress in the class generally.
 
 ## 2. Process monitoring and control, running jobs in the background.
 
