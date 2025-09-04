@@ -3,7 +3,7 @@
 ## Topics to cover
 
 - `man` pages
-- bash_profile
+- .zshrc, .bashrc, .bash_profile, etc.
 - text viewing and in terminal text editors
 - compression, decompression
 - more Linux commands, redirection
@@ -50,6 +50,8 @@ Notice that when you use `man`, all of the command line options will be clearly 
 
 Online manual pages (e.g., [less man page](https://man7.org/linux/man-pages/man1/less.1.html)) and other sites are also plentiful to read up on Linux commands or if you are looking for guidance.
 
+chatGPT and other chatbased AI platforms can be very valuable for summarizing the common uses, arguments, and command line options for any Linux command. While `man` pages are good for exploring all of the potential uses and options, AI assistance is your best bet for jumpstarting your understanding of the use of a specific command.
+
 
 ## 2. Terminal profile settings
 
@@ -64,6 +66,13 @@ When you do type a command such as above during a terminal session, it will only
 
 If you are running a newer Mac OS, you are probably running the zsh terminal application. If so, `.zshrc` is the name of the profile file. If you are running an older Mac OS, or just prefer bash as a terminal application, the profile information will be stored in `.bash_profile` or `.bashrc`. If you are using a recent install of Ubuntu Linux you should also be using a zsh terminal. To change protections on your use of several dangerous Linux commands (`rm`, `mc`, and `cp` even), we are going to customize all of your profile files to include alias commands that add some protections. This will ensure that you do no overwrite important files or directories, and that you dont accidentally vaporize large amounts of stored data. If you already have a profile with alias control behavior that you like, great. Either way, we are going to add the alias commands below, or are going to have you replace your current `.zshrc` file with examples I have provided on the github page.
 
+If you are not sure which shell you are running, the command below will tell you:
+
+    echo $SHELL
+
+For Mac Unix or PC Linux, you can change the default shell to `szh` as below:
+
+    chsh -s $(which zsh)
 
 The alias collection above has some useful features. `ll` and `ls`, when typed, will give you more complete, and/or more readable information. `rm`, `mv`, and `cp` have the `-i` option added, which is  HIGHLY recommended. This will change the behavior of `rm`, `mv`, or `cp` to always ask if you are sure you want to remove a file, or overwrite a file with the same name in terms of `cp` and `mv`.
 
@@ -213,7 +222,7 @@ All .txt files in a directory can be compressed (or decompressed) using a wildca
 
     gzip *.txt 
 
-`tar` is aLinux command with more flexibility that is commonly used for compressing directories (`gzip` and `gunzip` work with files NOT directories). We will learn more about `tar` later.
+`tar` is a Linux command with more flexibility that is commonly used for compressing directories (`gzip` and `gunzip` work with files NOT directories). We will learn more about `tar` later.
 
 `*` will make your life easier, and you will learn to use it in many contexts. `*` is short for wildcard, meaning it matches everything. So, `ls *.txt` would list all files that start with anything and end with `*txt` in the directory this command was executed from. Here is another simple example for now, which would copy all of the files starting with BS_1287 and ending in fastq.gz to a specified directory
 
@@ -377,7 +386,7 @@ You will first need to decompress `sample_passerina.fastq.gz`, as detailed above
 Use `less` to have a look inside this file to get an idea of how its contents are structured. Important keystrokes shortcuts for `less` include `q` to exit, `spacebar` to 
 skip down a page, and `b` to skip up a page.
 
-    less sample_passerina.fastq.gz
+    less sample_passerina.fastq
     
 We could write all of teh ID lines to a separate file:
 
