@@ -19,6 +19,17 @@ http://korflab.ucdavis.edu/Unix_and_Perl/current.html
 
 ## 2. Process monitoring and control, running jobs in the background.
 
+`top` is a built in process monitoring tool. `htop` is a bit nicer. If you dont have it installed, do the below:
+
+For Ubuntu linux
+
+    sudo apt update
+    sudo apt install htop -y
+
+For Max Unix:
+
+    brew install htop
+
 `jot`  is a Unix command for generating strings of numbers, among other things. Use `man` to read up on `jot`. Reminder on navigating file viewing in `less`: `q` to exit, space bar will skip through the file one terminal window sized page at a time, `b` to scroll backwards. Try the following command which will print 100 random numbers:
 
     $ jot -r 100
@@ -36,14 +47,29 @@ If you have successfully sent the numbers into a file, and if your `jot` command
 
 The `&` will cause the job to run in the background. Thus, you will have the normal prompt back in your terminal window, and if you exit the window you will not affect the job. For big jobs that take a long time, running in the background is essential. 
 
-What if you had the job running in the background, but you realized that you wanted to kill the process anyway? Mistakes happen a lot during the debugging process, and we assure you that you will commonly need to kill jobs (sometimes many at once).  `^c` will not work for that. Execute your `jot` command again, with the high number of replicates and running in the background. Now, use process control commands to see which jobs are running and to kill `jot`. (hint: There are multiple ways to do this, think `top`, `ps`, and `kill`)
+### Using `shuf` on Ubuntu if you don't have `jot`
+
+The `shuf` command is a simple way to generate random numbers or shuffle lines of input. It is included in **GNU coreutils**, which is installed by default on most Ubuntu systems. If you don’t already have it, you can install (or reinstall) it with:  
+
+```zsh
+sudo apt update
+sudo apt install coreutils
+```
+To generate 100,000 random numbers between 1 and 100,000: as above with `jot`, but with `shuf`:
+
+    shuf -i 1-100000 -n 100000
+
+Use redirect with `>` to send STDOUT to a file, as above, and run in background (with `&`.)
+
+
+What if you had the job running in the background, but you realized that you wanted to kill the process anyway? Mistakes happen a lot during the debugging process, and we assure you that you will commonly need to kill jobs (sometimes many at once).  `^c` will kill any job running in terminal, if that job is in the foreground, `^c` will not work if job is in the background. Execute your `jot` command again, with the high number of replicates and running in the background. Now, use process control commands to see which jobs are running and to kill `jot`. (hint: There are multiple ways to do this, think `top`, `ps`, and `kill`)
 
 
 ## 3. Extracting fields and sorting (`cut`, `sort`, `uniq`)
 
-Some useful Unix commands for extracting and organizing information from text, using the yeast_genome.gff file in the [week2 UnixII page](https://github.com/tparchman/BIOL792_course_site/tree/master/week2_UnixII).
+Some useful commands for extracting and organizing information from text, using the yeast_genome.gff file in the [week2 UnixII page](https://github.com/tparchman/BIOL792_course_site/tree/master/week2_UnixII).
 
-`cut`: can be used to extract fields (similar to columns in a data frame) from files. For example, the command below will extract fields 3-5 from the file `yeast_genome.gff`. In this case the delimiter, which is `tab`, is detected by default (delimiter can be specified with `d` option). 
+`cut`: can be used to extract fields (similar to columns in a data frame) from files. For example, the command below will extract fields 3-5 from the file `yeast_genome.gff`. In this case the delimiter, which is `tab`, is detected by default (delimiter can be specified with `d` option). Note 
 
     $ cut -f 3-5 yeast_genome.gff > feature_info.txt
 
@@ -99,7 +125,6 @@ Imagine that this is data that you just got back from whatever facility you paid
 **H**.  Do this again for individual "NVP_CY_48141", and individual "SDH_CY_43460". Now that you have three separate files, one for each individual, combine them into one file. 
 	
 
-*** Play with the example code in the book for chapters 4 and 5, and make sure you feel solid on it all before next week.
 
 
 
