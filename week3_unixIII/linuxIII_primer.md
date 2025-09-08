@@ -356,3 +356,45 @@ Two, you can change the file to executable, then run, as follows:
     $ ./firstbash.sh
 
 I have added three simple shell scripts to the [week3](https://github.com/tparchman/F24_BIOL792/tree/main/week3_unixIII) directory on the course github page. Have a look at these, and play around with executing them ahead of next weeks meeting.
+
+
+## Week 3 Command Cheat Sheet
+
+| Command | Purpose | Example |
+|---------|---------|---------|
+| `top` | Monitor processes in real time | `top` |
+| `htop` | Interactive, colorful process monitor (install separately) | `htop` |
+| `ps aux` | List all running processes | `ps aux` |
+| `ps aux \| grep <name>` | Search processes by keyword | `ps aux \| grep firefox` |
+| `pgrep -a <name>` | Get process IDs (PIDs) by name | `pgrep -a ping` |
+| `kill <PID>` | Kill a process by ID | `kill 9031` |
+| `ctrl c` | Stop a running job in the foreground | *(keyboard shortcut)* |
+| `ctrl z` + `bg` | Pause a job, then resume in the background | *(keyboard shortcut + command)* |
+| `<command> &` | Run a job in the background | `cat *fastq > all.fastq &` |
+| `nohup` | Keep jobs running after logout | `nohup ping google.com &` |
+| `jot -r N` | Generate N random numbers (macOS/Unix) | `jot -r 100` |
+| `rm` | Remove files (interactive if aliased) | `rm file.txt` |
+| `rm -rf` | Dangerous: remove directories/files recursively & force | `rm -rf *txt` |
+| `rmdir` | Remove an empty directory | `rmdir olddir` |
+| `rsync -av` | Copy/sync directories with archive + verbose | `rsync -av src/ dest/` |
+| `rsync -av --delete` | Sync directories exactly, removing extra files | `rsync -av --delete src/ dest/` |
+| `rsync -av user@server:/src/ dest/` | Copy data to/from remote servers | `rsync -av data/ user@hpc.edu:/scratch/` |
+| `ls -l` / `ll` | List files with permissions and details | `ls -l` |
+| `chmod` | Change file permissions | `chmod a+x script.sh` |
+| `grep` | Search text by pattern | `grep "chrI" yeast_genome.gff` |
+| `cut -fN` | Extract a specific field (column) from tab-delimited file | `cut -f3 yeast_genome.gff` |
+| `sort` | Sort text or numbers | `sort yeast_genome.gff` |
+| `uniq` | Collapse duplicate lines | `cut -f3 yeast_genome.gff \| sort \| uniq` |
+| `wc -l` | Count lines in a file or stream | `ls \| wc -l` |
+| `curl` | Download from a web URL | `curl -O https://.../file.fasta` |
+| `wget` | Alternative to curl for downloading files | `wget https://.../yeast_genome.gff` |
+| `ssh user@server` | Securely log into a remote server | `ssh username@server.edu` |
+| `sftp user@server` | Securely transfer files to/from remote server | `sftp username@server.edu` |
+| `echo` | Print text to the screen | `echo "Hello world"` |
+| `#!/bin/bash` / `#!/bin/zsh` | Shebang: first line of a shell script | *(placed at top of `.sh` file)* |
+| `chmod a+x script.sh` | Make a script executable | `chmod a+x first_shell.sh` |
+| `./script.sh` | Run an executable script | `./first_shell.sh` |
+
+---
+
+💡 **Tip:** For any command, try `man <command>` or `<command> --help` to see more details and options.  
