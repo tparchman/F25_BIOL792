@@ -397,4 +397,3 @@ I have added three simple shell scripts to the [week3](https://github.com/tparch
 
 ---
 
-💡 **Tip:** For any command, try `man <command>` or `<command> --help` to see more details and options.  
