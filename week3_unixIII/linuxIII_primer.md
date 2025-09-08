@@ -275,51 +275,84 @@ Pipes are obviously useful to send output from one Unix command to another, yet 
 ## 6. Interacting with remote locations
 <p>&nbsp;</p>
 
-### retrieving content from web addresses 
+### Retrieving content from web addresses 
 It is quite common to download files, or large batches of files, from web addresses or remote servers. 
 
-`curl` can be used to easily pull data from anywhere. The `-o` option below sets the name of the file in the current directory. 
+### Example: Using `curl` to pull data from NCBI  
 
-    $ curl -o genbankreadme.txt ftp://ftp.ncbi.nlm.nih.gov/genbank/README.genbank
+The `curl` command can be used to fetch biological data directly from online databases such as NCBI. For example, the command below retrieves the FASTA sequence of the human BRCA1 gene (accession **NM_007294.4**) from NCBI’s nucleotide database:
 
-`wget` is similarly useful, and similar to execute
+    curl "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NM_007294.4&rettype=fasta&retmode=text" -o BRCA1.fasta
 
-    $ wget "https://github.com/tparchman/BIOL792_course_site/blob/master/week1_unixI/science.txt"
+What this does:
 
-If you don't have `wget` installed on your Mac Unix system, we will cover how to install packages next week. For the above link, `curl` would work similarly, although you would need to click on the 'raw' or 'download' buttons in github to get a workable link (notice the difference between the url above and below).
+- `curl` fetches the data from the NCBI URL.
 
-    $ curl -o sci.txt "https://raw.githubusercontent.com/tparchman/BIOL792_course_site/master/week1_unixI/science.txt"
+- The URL uses NCBI E-utilities (efetch) to query the nucleotide database (db=nuccore).
+
+- id=NM_007294.4 specifies the sequence accession number.
+
+- rettype=fasta and retmode=text tell NCBI to return the sequence in FASTA format.
+
+- -o BRCA1.fasta saves the output into a file called BRCA1.fasta.
+
+After running this command, you can inspect the file with:
+
+    less BRCA1.fasta
+
+`wget` is similarly useful, and similar to execute. The example below illustrates how you can pull files straight from the github repo to a current directory. To get the link right, click on a file on github, right click on `raw` and copy the link.
+
+    $ wget "https://github.com/tparchman/F25_BIOL792/raw/refs/heads/main/week3_unixIII/yeast_genome.gff"
+
+
 <p>&nbsp;</p>
 
-### Connecting to remote servers and HPC (High Performance Computing) systems
+### Connecting to remote servers and HPC (High Performance Computing) systems 
 
-`sftp` (secure file transfer protocol) is a set of Unix tools for secure transfers between remote addresses. We probably won't use it in this course, but it will invetibly be used by anyone retrieving or transferring large amounts of data (i.e., DNA sequencing centers). 
+Two of the most common tools you will encounter when working with remote servers are **SSH** and **SFTP**.  
 
-`ssh`: We will learn more about this later in the semester when we connect to remote servers to do work.
+- **SSH (Secure Shell):** lets you log into another computer (like a lab server or HPC system) from your terminal, giving you a secure command-line session as if you were sitting at that machine. Once we start using `ssh` to connect to remote servers, you will want to revisit the section on **permissions** above.
+
+```
+ssh username@ponderosa.unr.biology
+```
+
+- **SFTP (Secure File Transfer Protocol):** uses the same secure connection but is designed for moving files back and forth between your computer and a remote system.  
+
+Example (to start an SFTP session):
+```
+sftp username@server.university.edu
+```
+These tools are essential for working in research computing because they allow you to run code on powerful servers and transfer data safely. We will cover SSH and SFTP in much more detail later in the semester, when we start working with remote servers and high-performance computing systems. For now, it’s enough to know that they provide secure remote access and file transfer capabilities.  
+
 <p>&nbsp;</p>
 
-## 7. Writing bash scripts 
+## 7. Writing shell scripts 
 
-Here we will Unix commands to learn to write your first simple programs. We will cover this quickly today, and come back for more next week.
+You’ve now learned how to run individual commands in the terminal. But what if you want to **save a sequence of commands** and run them all at once? This is where **shell scripting** comes in. 
 
-We call scripts, or programs, that execute Unix commands "bash" scripts because we are typically operating in the bash shell. Simply put these are programs consisting of Unix code and arguments that can be written to do simple or surprisingly complicated jobs.
+Here we will Linux commands to learn to write your first simple programs. We will cover this quickly today, and come back for more next week.
 
-For this, our code will simply be written and stored in a text file. We will use the extension `.sh` rather than `.txt` to signify that this is a Unix or bash script. The first line of such a file (or program) is the "shebang" followed by the location of the bash interpretter on your system.
+We call scripts, or programs, that execute linux commands "shell" scripts because we are operating in the shell (bash or zsh) and using linux commands as the language. Simply put these are programs consisting of linux code and arguments that can be written to do simple or surprisingly complicated jobs.
 
-    #!/usr/bin/bash
+- **When:** Use shell scripts when you need to repeat tasks, automate workflows, or keep a record of your commands so you can rerun them later.  
+- **Where:** Shell scripts are just plain text files, usually saved with a `.sh` extension (e.g., `myscript.sh`). You can create them in any text editor.  
+- **How:**  For this, our code will simply be written and stored in a text file. We will use the extension `.sh` rather than `.txt` to signify that this is a shell script. The first line of such a file (or program) is the `shebang` which tells the computer what interpreter to use.
+
+    #!/bin/zsh
 
 To warm up to this idea, lets just print something to screen here. Your bash script thus should have exactly what is below.
 
-    #!/usr/bin/bash 
+    #!/bin/zsh 
     echo "Welcome the the Biggest Little City"
 
-Save the file as something like firstbash.sh. Then, you can execute from the command line in one of two ways. One, you can simply type:
+Save the file as something like first_shell.sh. Then, you can execute from the command line in one of two ways. One, you can simply type:
 
-    $ bash firstbash.sh
+    $ zsh first_shell.sh
 
 Two, you can change the file to executable, then run, as follows:
 
-    $ chmod a+x firstbash.sh
+    $ chmod a+x first_shell.s
     $ ./firstbash.sh
 
 I have added three simple shell scripts to the [week3](https://github.com/tparchman/F24_BIOL792/tree/main/week3_unixIII) directory on the course github page. Have a look at these, and play around with executing them ahead of next weeks meeting.
