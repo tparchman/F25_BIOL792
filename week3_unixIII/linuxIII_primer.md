@@ -19,7 +19,7 @@
 
     $ top
 
-`htop` will display information in a more readable in interactive format
+`htop` will display information in a more readable and interactive format
 
     $ htop
 
@@ -39,11 +39,11 @@ If you have mutliple processes running, and want to kill one, use `kill` followe
 
 If you have a job running in the shell that is not doing what you want, you can kill from the terminal with "ctrl c". You can also temporarily kill with "ctrl z", and then restart it in the background with `bg` typed at the prompt with no additional arguments necessary. Try this out, it will be useful in the future.
 
-If you are calling a command that is going to take some time, and you dont want it to occupy the shell you are working in, you can send it to the background with `&`. Once a job is running in the background, the job will continue once you close the terminal session or exit your connection to a remote server
+If you are calling a command that is going to take some time, and you dont want it to occupy the shell you are working in, you can send it to the background with `&`. Once a job is running in the background, the job will continue once you close the terminal session or exit your connection to a remote server. The below command would take all files ending in fastq from within the current directory and concatenate them into one much larger file.
 
     $ cat *fastq > allgenomefiles.fastq &
 
-Especially useful if you are working on a remote server and want to disconnect, `nohup`, short for no hang up is a Linux command that keeps processes running even after exiting the terminal. Nohup prevents the processes or jobs from receiving the SIGHUP (Signal Hang UP) signal, which is sent to a process upon closing or exiting the terminal. 
+Especially useful if you are working on a remote server and want to disconnect, `nohup`, short for no hang up, is a more secure command that keeps processes running even after exiting the terminal. Nohup prevents the processes or jobs from receiving the SIGHUP (Signal Hang UP) signal, which is sent to a process upon closing or exiting the terminal. 
 
 To use `nohup`:
 
