@@ -275,7 +275,7 @@ This will produce a file "u_grouse_barcodes.csv", which should have unix line en
 
 The true payoff of scripting comes when you need to process many files. You don’t want to type a new command for each file. Instead, you can write a loop that applies the same logic to all inputs.
 
-Let's say we wanted to write a script that would take any number of barcode files (as provided in week4 directory) and 1) create an ids file (e.g., `CO_HC_20`) and 2) create a pops file (e.g., `CO_HC`). We would use this to begin each sequencing project that we are working on and ensure that the format of the new files is the exact same each time. Start by creating a new script (`make_ids_and_pops.sh`) using `touch` and adding the header line as above.
+Let's say we wanted to write a script that would take any number of barcode files (as provided in week4 directory) and 1) create an ids file (e.g., `CO_HC_20`) and 2) create a pops file (e.g., `CO_HC`). We would use this to begin each sequencing project that we are working on and ensure that the format of the new files is the exact same each time. Start by creating a new script (`make_ids_and_pops.sh`) using `touch` and adding the header shebang line as above.
 
 Before we begin adding commands to our script, we first need to think about the terminal command that we will eventually use to execute our script (don't type this now - you're script hasn't been made yet):
 
