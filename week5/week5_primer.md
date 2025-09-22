@@ -197,7 +197,7 @@ If all is in order, "It is time to learn Python" should print to the screen, and
 <p>&nbsp;</p>
 
 
-# 4. Quick start tutorial for using jupyter notebooks
+# 4. Quickstart tutorial for using jupyter notebooks
 
 Now that youve written and run your first Python program as a `.py` script from the terminal, lets look at writing python code **Jupyter notebooks**. These notebooks are widely used in teaching, research, and data science because it lets you mix code, results, and notes all in one place.
 
@@ -385,8 +385,50 @@ for key in NameNumber:
 ...     print(key, ":", NameNumber[key]) 
 ```
 
+# 6. Writing/thinking in Pseudocode
 
-# 4. Additional resources to help with learning Python
+Before writing any actual code, it is often helpful to first outline your plan in **pseudocode**. This is an informal way of writing out  *logic* of a program in English in order to organize your thoughts.
+
+### What is pseudocode?
+- A step-by-step outline of what your code should do.  
+- Written in human-readable form, without worrying about Python syntax.  
+- A blueprint for your actual script.  
+
+### Why use pseudocode?
+- **Clarity:** Forces you to think about logic before getting stuck on Python details.  
+- **Planning:** Break down problems into smaller pieces.  
+ 
+
+### When to use pseudocode
+- When approaching a problem for the first time.  
+- When writing functions or loops that involve multiple steps.  
+- When designing workflows that combine data processing, analysis, and visualization.  
+
+### Example
+Suppose we want to count how many lines in a FASTQ file start with `@`.  
+First write it as pseudocode:
+
+**Open the FASTQ file\
+Set a counter to zero\
+For each line in the file:\
+If the line starts with "@":\
+Add one to the counter\
+Print the counter**
+
+This would translate into python as:
+
+```python
+counter = 0
+with open("sample.fastq") as infile:
+    for line in infile:
+        if line.startswith("@"):
+            counter += 1
+print(counter)
+```
+
+
+
+# 7. Additional resources to help with learning Python
 
 
 ## Python documentation and other useful resources. 
