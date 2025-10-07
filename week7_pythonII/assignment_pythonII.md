@@ -84,7 +84,7 @@ C. When we are printing straight to the screen, we refer to this is standard out
 
     $ python python2_number3.py > listplay.txt
 
-Or you could write to a new file that you create in your python code. We will learn more about how to do this next week, but for now, look at the code below for a demonstration. The `sys` library must be imported, the file is made the with `open` function, which also initializes the `OUT` filehandle. Then the `OUT.write` call writes whatever you could like to write. Notice a line ending has been added, because unlike `print` , `.write` does not add line endings automatically.
+Or you could write to a new file that you create in your python code. This will obviously be the case if you are writing code within `jupyter notebooks`, as most of you are for now. We will learn more about how to do this next week, but for now, look at the code below for a demonstration. The `sys` library must be imported, the file is made the with `open` function, which also initializes the `OUT` filehandle. Then the `OUT.write` call writes whatever you could like to write. Notice a line ending has been added, because unlike `print` , `.write` does not add line endings automatically.
 
 ```py
 import sys
