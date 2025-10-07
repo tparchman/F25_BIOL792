@@ -9,11 +9,9 @@
 <p>&nbsp;</p>
 
 
-## 1. A bit more string work. This problem involves working with a DNA sequence that has some information in front of it. To start your program, type (or copy) this line into your program and assign it to a string.
+## 1. A bit more string work. This problem involves working with a DNA sequence that has some information in front of it. To start, copy this line into your script/jupyter notebook and assign it to a string.
 
     DNA_Info = 'SAMPLE_110 Pop3 atatctcgcggggtttatatatattatttaaa'
-
-Note: Chapter 8 of Haddock and Dunn walks you through a number of very similar examples for working with DNA sequences.
 
 A. Get rid of everything other than the DNA sequence (e.g., using `str.replace`), and save this to another string.
 
@@ -43,7 +41,7 @@ A. Work with DNA_Seq above, which is currently a string. Often you will read in 
 B. Note that `.join` is the opposite of `str.split`, and can be used to turn an list back into a string. The syntax is a bit different for `.join`, where the delimiter must be specified before the `.`. This is a task you might routinely encounter. Use `.join` to turn the list you made above back into a comma delimited string.
 <p>&nbsp;</p>
 
-C. Lets go back to the list you made in A. Add the an additional list, specified below, to the end of the first list (essentially, concatenate the two DNA sequences together).
+C. Lets go back to the list you made in A. Add the additional list, specified below, to the end of the first list (essentially, concatenate the two DNA sequences together).
 
     SeqList2 = ['A','T','A','T','A','T','A','T','A','T','A','T','A','T','A','T','A','T','A','T','A','T']
 
