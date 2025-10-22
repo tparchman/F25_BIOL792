@@ -1,4 +1,4 @@
-# Python assignment 4, Data Science for Biology
+# Python assignment 4
 ## Topics to cover
 - Working with files: Input/Output
 - `for` loops, processing files one line at a time.
@@ -28,7 +28,7 @@ Print to screen or write to an outfile that contains a report with several featu
 ## ATATATATATATATATATATATATATAT...........
 <p>&nbsp;</p>
 
-Your script should 
+Your code should 
 
 1. Count the number of AT (dinucleotide) microsatellites that have at least 4 repeats.
 2. Count the number of ATC (trinucleotide) microsatellites that have at least 4 repeats.
