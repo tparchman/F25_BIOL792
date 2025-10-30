@@ -3,6 +3,7 @@
 import re
 import sys
 
+print(sys.argv)
 for file in sys.argv[1:]:
 	sys.stderr.write("Processing file: %s \n" %(file))
 	IN=open(file, 'r')
